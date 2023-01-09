@@ -1,0 +1,134 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <tab name="init" type="InitTab" active="false" scrollx="20.000000000000227" scrolly="0" scale="0.9"></tab>
+  <tab name="main" type="MainTab" active="true" scrollx="43.209326677304375" scrolly="-214.48195769208706" scale="0.7966531207743132">
+    <block xmlns="https://developers.google.com/blockly/xml" type="addAnnotation" id="na@#5zx92~iTVg=`[MF]" x="190" y="230">
+      <mutation xmlns="http://www.w3.org/1999/xhtml" usenameslot="false"></mutation>
+      <value name="ANNOTATION">
+        <shadow type="text" id="9K~xLJcI@d/r2BBWb`C0">
+          <field name="TEXT">1</field>
+        </shadow>
+      </value>
+      <value name="TARGET">
+        <shadow type="objectList" id=".YN_uhSKVdiBfLJl4/q_">
+          <field name="FIELDNAME">Moon</field>
+        </shadow>
+      </value>
+      <value name="CONTENTS">
+        <shadow type="text" id="q2ZKjjJKy(z@lI5awyv{">
+          <field name="TEXT">cluster fucking moon</field>
+        </shadow>
+      </value>
+      <value name="ID">
+        <shadow type="text" id="0i)M{j[c-i2{tz85iL+?">
+          <field name="TEXT">poi1</field>
+        </shadow>
+      </value>
+    </block>
+    <block xmlns="https://developers.google.com/blockly/xml" type="whenClicked" id="H_J;9+)!WY7nFNXwd0DN" inline="true" x="190" y="430">
+      <mutation xmlns="http://www.w3.org/1999/xhtml" adveventoptions="true" enableifmissed="false"></mutation>
+      <field name="X_RAY">FALSE</field>
+      <field name="DOUBLE_CLICK">FALSE</field>
+      <field name="LEFT_BUTTON">TRUE</field>
+      <field name="MIDDLE_BUTTON">TRUE</field>
+      <field name="RIGHT_BUTTON">TRUE</field>
+      <value name="VALUE">
+        <shadow type="objectList" id="-/R}POmhpy_50-5D/VZ0">
+          <field name="FIELDNAME">Moon</field>
+        </shadow>
+      </value>
+      <statement name="DO">
+        <block type="console.log" id="mHbb/cOxFJrVVU/iM(LG">
+          <value name="VALUE">
+            <shadow type="text" id="dab3IrB^;X4rT8;8sVZL">
+              <field name="TEXT">Hello, Verge!</field>
+            </shadow>
+            <block type="text" id="dy:%jR`^QS`Lky!wT-*O">
+              <field name="TEXT">From Moon to Camera:</field>
+            </block>
+          </value>
+          <next>
+            <block type="console.log" id="5(T-0ee$mjAA2hsqax((">
+              <value name="VALUE">
+                <shadow type="text" id="jfJ#DYl54l]1.4SZ|lv+">
+                  <field name="TEXT">Hello, Verge!</field>
+                </shadow>
+                <block type="distanceBetweenObjects" id="?+F0(Fi~crCyBfd_=n)R">
+                  <value name="OBJECT1">
+                    <shadow type="objectList" id=";)OJFX{_Xr^pv#5=fas[">
+                      <field name="FIELDNAME">Moon</field>
+                    </shadow>
+                  </value>
+                  <value name="OBJECT2">
+                    <shadow type="objectList" id="9BplsoQV!ypuNH2r|foA">
+                      <field name="FIELDNAME">Camera.001</field>
+                    </shadow>
+                  </value>
+                </block>
+              </value>
+            </block>
+          </next>
+        </block>
+      </statement>
+    </block>
+    <block xmlns="https://developers.google.com/blockly/xml" type="whenClicked" id="c`Jc+pt++Ly7No}2S$w-" inline="false" x="190" y="610">
+      <mutation xmlns="http://www.w3.org/1999/xhtml" adveventoptions="false" enableifmissed="false"></mutation>
+      <field name="X_RAY">FALSE</field>
+      <field name="DOUBLE_CLICK">FALSE</field>
+      <field name="LEFT_BUTTON">TRUE</field>
+      <field name="MIDDLE_BUTTON">TRUE</field>
+      <field name="RIGHT_BUTTON">TRUE</field>
+      <value name="VALUE">
+        <shadow type="objectList" id="P3`qf#W9a#@1Jc?:5;6a">
+          <field name="FIELDNAME">&lt;none&gt;</field>
+        </shadow>
+        <block type="allObjectList" id=":o4+YivX5]#0QJn5S|;`"></block>
+      </value>
+      <statement name="DO">
+        <block type="printPerformanceInfo" id="ZTg?+n#lN=`4Tz*1Plws"></block>
+      </statement>
+    </block>
+    <block xmlns="https://developers.google.com/blockly/xml" type="getGPU" id="uaQ%L0yfgra#4==f318=" x="210" y="750">
+      <field name="FEATURE">VENDOR</field>
+    </block>
+    <block xmlns="https://developers.google.com/blockly/xml" type="getGPU" id="(_e|vX6b[Z;Zq2.45Y%R" x="210" y="810">
+      <field name="FEATURE">MODEL</field>
+    </block>
+    <block xmlns="https://developers.google.com/blockly/xml" type="controls_if" id="T6l?|]7~4@I?OxKLtx4`" x="210" y="890">
+      <value name="IF0">
+        <block type="logic_compare" id="OrtZ{x4h$E(!cp~u$K*N">
+          <field name="OP">GTE</field>
+          <value name="A">
+            <block type="text_indexOf" id="b*o/LOGf8|X-.,.-H%+X">
+              <field name="END">FIRST</field>
+              <value name="VALUE">
+                <block type="getGPU" id="Fv}s?|?Gp+{W8B4,$p}6">
+                  <field name="FEATURE">MODEL</field>
+                </block>
+              </value>
+              <value name="FIND">
+                <block type="text" id="9G9@)DN*YImn4o~zP83w">
+                  <field name="TEXT">GeForce GTX</field>
+                </block>
+              </value>
+            </block>
+          </value>
+          <value name="B">
+            <block type="math_number" id="bjn.HYkzN1Ly$$cq@tRB">
+              <field name="NUM">0</field>
+            </block>
+          </value>
+        </block>
+      </value>
+      <statement name="DO0">
+        <block type="setScreenScale" id="W9,{s3G`!!8/C^itC@+q">
+          <value name="FACTOR">
+            <shadow type="math_number" id="^k;|-d3CDrR]e?Amq$n/">
+              <field name="NUM">3</field>
+            </shadow>
+          </value>
+        </block>
+      </statement>
+    </block>
+  </tab>
+  <editorsettings viewport-x="879" viewport-y="28" viewport-w="598" viewport-h="377" viewport-hidden="false" toolbox-library-mode="false" toolbox-minimized-mode="false"></editorsettings>
+</xml>
